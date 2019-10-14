@@ -10,7 +10,9 @@
                  required>
         </div>
       </template>
-
+      <input type="radio" class="gender" name="gender" value="1" checked>男
+      <input type="radio" class="gender" name="gender" value="0">女
+      <div></div>
       <button type="submit" class="btn" id="submit">注册</button>
       <button type="reset" class="btn">复位</button>
       <router-link to="/login">已有帐号?立即登录</router-link>
