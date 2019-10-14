@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+</head>
+
+<body>
+<div id="content">
+    <form action="/pay_for_knowledge_war_exploded/aaa" method="get">
+        <div>
+            <label for="username" class="label-text">用　　户　　名:</label><input type="text" class="form-item"
+                                                                            name="username"
+                                                                            id="username"
+                                                                            placeholder="input username">
+        </div>
+
+        <!--    password-->
+        <div>
+            <label for="password" class="label-text">密　　　　　码:</label><input type="text" class="form-item"
+                                                                            name="password"
+                                                                            id="password"
+                                                                            placeholder="input password">
+
+
+        </div>
+
+        <!--    confirm password-->
+        <div id="password_reput_div">
+            <label for="password_reput" class="label-text">重　复　密　码:</label><input type="text" class="form-item reput"
+                                                                                  name="password_reput"
+                                                                                  id="password_reput"
+                                                                                  placeholder="confirm password">
+        </div>
+
+        <!--    gender-->
+        <div>
+            <label for="gender-male" class="label-text">性　　　　　别:</label><input type="radio" class="form-item-gender"
+                                                                               name="gender"
+                                                                               id="gender-male">男
+            <input type="radio" class="form-item-gender" name="gender" id="gender-female">女
+        </div>
+
+        <!--    tel-->
+        <div>
+            <label for="tel" class="label-text">手　　　　　机:</label><input type="tel" class="form-item" name="tel" id="tel"
+                                                                       placeholder="input telephone number">
+        </div>
+
+        <!--    email address-->
+        <div>
+            <label for="email" class="label-text">邮　件　地　址:</label><input type="text" class="form-item" name="email"
+                                                                         id="email"
+                                                                         placeholder="input email address">
+        </div>
+
+        <!--    transaction password-->
+        <div>
+
+            <label for="transaction_password" class="label-text">交　易　密　码:</label><input type="password"
+                                                                                        class="form-item"
+                                                                                        name="transaction_password"
+                                                                                        id="transaction_password"
+                                                                                        placeholder="input transaction_password">
+        </div>
+
+        <!--    confirm transaction password-->
+        <div>
+            <label for="transaction_password_reput" class="label-text">确认交易密码：</label><input type="password"
+                                                                                             class="form-item"
+                                                                                             name="transaction_password_reput"
+                                                                                             id="transaction_password_reput"
+                                                                                             placeholder="confirm transaction_password">
+        </div>
+        <button type="submit" class="btn">注册</button>
+        <button type="reset" class="btn">复位</button>
+        <a href="login.html">已有帐号?立即登录</a>
+    </form>
+
+</div>
+</body>
+</html>
