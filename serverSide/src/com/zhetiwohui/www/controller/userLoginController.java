@@ -35,8 +35,7 @@ public class userLoginController extends HttpServlet {
         // 通过request对象的getParameter方法获取前端请求的表单数据，返回值为字符串
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-//        String gender = request.getParameter("gender");
-        String gender = "1";
+        String gender = request.getParameter("gender");
         String tel = request.getParameter("tel");
         String email = request.getParameter("email");
         String transaction_password = request.getParameter("transaction_password");
