@@ -6,7 +6,7 @@
           <input :type=item.type class="form-item" :name=item.name :id="item.name"
                  :placeholder="item.placeholderText"
                  :pattern=item.pattern
-                 @focus="item.focusF?item.focusF():null"
+                 @change="item.changeFunc?item.changeFunc():null"
                  required>
         </div>
       </template>
@@ -43,8 +43,8 @@
             placeholderText: 'password',
             type: 'text',
             pattern: "^[0-9a-zA-Z]{6,}$",
-            // focusF:this.twiceCheck.bind(null,this.password,this.password_reput)
-            focusF: this.twiceCheck.bind(null, "password", "password_reput")
+            // changeFunc:this.twiceCheck.bind(null,this.password,this.password_reput)
+            changeFunc: this.twiceCheck.bind(null, "password", "password_reput")
           },
           {
             divID: 'password_reput-div',
@@ -75,7 +75,7 @@
             placeholderText: 'transaction_password',
             type: 'text',
             pattern: "^[0-9a-zA-Z]{6,}$",
-            focusF: this.twiceCheck.bind(null, "transaction_password", "transaction_password_reput")
+            changeFunc: this.twiceCheck.bind(null, "transaction_password", "transaction_password_reput")
           },
           {
             divID: 'transaction_password_reput-div',
