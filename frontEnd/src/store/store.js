@@ -8,10 +8,14 @@ export default new Vuex.Store({
     routes: [
       {path: "/", info: "主页"},
       {path: "/login", info: "登录"},
-      {path: "/register", info: "注册"}
+      {path: "/register", info: "注册"},
+      {path: "/son", info: "son"},
+      {path: "/father", info: "father"}
     ],
     routes_auth: [
-      {path: "/", info: "主页"}
+      {path: "/", info: "主页"},
+      {path: "/son", info: "son"},
+      {path: "/father", info: "father"}
     ],
     username: ''
 

@@ -21,7 +21,6 @@
 </template>
 <script>
   import store from '../store/store.js';
-  import {mapState} from 'vuex'
 
   export default {
     name: 'register',
@@ -94,8 +93,6 @@
     },
     store,
     methods: {
-      // checkTwice,
-      // checkInput,
       twiceCheck
     },
     mounted() {

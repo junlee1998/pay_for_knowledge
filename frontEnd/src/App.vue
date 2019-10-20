@@ -13,18 +13,17 @@
       <div id="content">
         <router-view></router-view>
       </div>
-
     </div>
   </div>
 </template>
 
 <script>
-  // import Vue from 'vue'
   import login from './components/login';
   import axios from '../static/js/http';
   import {mapState} from 'vuex'
   import store from './store/store'
   import {mapMutations} from 'vuex'
+
 
   export default {
     name: 'App',
@@ -48,8 +47,6 @@
       this.routes_data = this.username ? this.routes_auth : this.routes
     }
   }
-
-
 </script>
 <style>
 

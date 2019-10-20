@@ -21,7 +21,6 @@
 </template>
 <script>
   import axios from '../../static/js/http'
-  import store from '../store/store'
   import {mapMutations} from 'vuex'
 
   export default {
@@ -53,12 +52,12 @@
       }
     },
     axios,
-    store,
+    // store,
     methods: {
       ...mapMutations(["update_auth"]),
       axios_request() {
         //开始前获取表单输入的用户名和密码
-        for (var i in this.post_data) {
+        for (let i in this.post_data) {
           this.post_data[i] = document.getElementById(i).value;
         }
         //封装params
@@ -73,7 +72,6 @@
         })
         //解析服务器返回的response,并且做出相应的处理
           .then((response) => {
-            console.log(response.headers.check_info);
             if (response.headers.check_info === "true") {
               localStorage.username = params.get("username");
               location.href = "http://localhost:8080/";
