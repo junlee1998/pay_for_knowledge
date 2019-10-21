@@ -37,10 +37,7 @@
     },
     computed: mapState(['routes', "routes_auth", "username"]),
     methods: {
-      logout() {
-        localStorage.username = ''
-      },
-      ...mapMutations(["update_auth"]),
+      ...mapMutations(["update_auth","logout"]),
     },
     mounted() {
       this.update_auth();

@@ -21,7 +21,6 @@
 </template>
 <script>
   import axios from '../../static/js/http'
-  import {mapMutations} from 'vuex'
 
   export default {
     name: 'login',
@@ -52,9 +51,7 @@
       }
     },
     axios,
-    // store,
     methods: {
-      ...mapMutations(["update_auth"]),
       axios_request() {
         //开始前获取表单输入的用户名和密码
         for (let i in this.post_data) {
@@ -70,14 +67,14 @@
           url: "/api/pay_for_knowledge_war_exploded/login",
           params
         })
-        //解析服务器返回的response,并且做出相应的处理
+        //执行到这一步时,账号和密码的验证已经通过了
           .then((response) => {
-            if (response.headers.check_info === "true") {
-              localStorage.username = params.get("username");
-              location.href = "http://localhost:8080/";
-            } else {
-              alert("账号或密码错误")
-            }
+            localStorage.setItem("username",params.get("username"));
+            location.href = "http://localhost:8080/";
+          })
+          //解析服务器返回的response,并且做出相应的处理
+          .catch(error => {
+            console.log("error:" + error)
           })
       }
     }

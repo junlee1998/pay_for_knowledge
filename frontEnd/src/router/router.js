@@ -6,6 +6,10 @@ import register from "../components/register";
 import father from "../components/father";
 import son from "../components/son";
 import store from "../store/store";
+import userinfo from "../components/userinfo";
+
+
+
 Vue.use(Router);
 
 const routes = [
@@ -37,6 +41,10 @@ const routes = [
   {
     path: '/son',
     component: son
+  },
+  {
+    path: '/userinfo',
+    component: userinfo
   }
 ];
 

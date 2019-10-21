@@ -10,7 +10,8 @@
       <div class="recommend">推荐问题</div>
       <div class="other-info">
         <div id="user-info">
-          <h1>个人信息</h1>
+          <h1>userinfo</h1>
+          <userinfo></userinfo>
         </div>
         <div id="big-wig">
           <h1>大神</h1>
@@ -22,10 +23,11 @@
 </template>
 <script>
   import channel from "./channel";
+  import userinfo from "./userinfo";
 
   export default {
     name: 'home-page',
-    components: {channel}
+    components: {channel,userinfo}
 
   }
 </script>
