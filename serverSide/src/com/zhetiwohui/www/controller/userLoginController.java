@@ -21,8 +21,8 @@ public class userLoginController extends HttpServlet {
         userinfoDao sd = new userinfoDao();
         userEntity s = sd.queryByID(username, password);
         System.out.println(s);
-        if (s != null) {
-            response.setHeader("check_info", "true");
+        if (s == null) {
+            response.setStatus(401);
         }
     }
 
@@ -36,6 +36,7 @@ public class userLoginController extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String gender = request.getParameter("gender");
+//        String gender = "1";
         String tel = request.getParameter("tel");
         String email = request.getParameter("email");
         String transaction_password = request.getParameter("transaction_password");
